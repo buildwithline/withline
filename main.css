@@ -1,0 +1,82 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, /Users/kylemann/Desktop/line/main.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, /Users/kylemann/Desktop/line/main.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, /Users/kylemann/Desktop/line/main.scss */
+body {
+  line-height: 1; }
+
+/* line 34, /Users/kylemann/Desktop/line/main.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, /Users/kylemann/Desktop/line/main.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, /Users/kylemann/Desktop/line/main.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, /Users/kylemann/Desktop/line/main.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 50, /Users/kylemann/Desktop/line/main.scss */
+body {
+  font-family: 'Inter', sans-serif;
+  width: 100%; }
+  /* line 54, /Users/kylemann/Desktop/line/main.scss */
+  body .main {
+    padding: 8em 4em;
+    margin: 0 auto;
+    max-width: 35em; }
+    /* line 58, /Users/kylemann/Desktop/line/main.scss */
+    body .main .header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2em; }
+    /* line 64, /Users/kylemann/Desktop/line/main.scss */
+    body .main p {
+      line-height: 1.65;
+      font-size: .85em;
+      margin-top: 1.25em; }
+
+/* Dark theme styles */
+/* line 74, /Users/kylemann/Desktop/line/main.scss */
+body.dark {
+  background-color: #000000;
+  color: #ffffff; }
+
+/*# sourceMappingURL=main.css.map */
