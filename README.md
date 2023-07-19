@@ -6,6 +6,6 @@ These dynamics foster collaboration beyond the confines of jurisdiction and trad
 
 Line's mission is to merge the wisdom gained from emerging organizational patterns with transformative innovation empowering individuals, groups, and organizations alike. Whether you are a self-taught programmer seeking practical experience, a business looking to engage freelancers, an open-source project accepting contributions, a community organizing around a common objective, an entrepreneur building a product, or an established business maturing their organization, Line offers a platform to achieve and execute your goals. It provides opportunities for individuals to gain experience, businesses to access global talent, and communities to organize and mobilize collective efforts.
 
-In this evolving landscape of decentralized organizations and distributed collaboration, Line opens new avenues for individuals, groups, and organizations to come together, collaborate effectively, and achieve previously unimaginable aspirations. It represents a paradigm shift, where the path to freedom has become more accessible than ever, promising greater autonomy, innovation, and collective progress.
+In this evolving landscape, Line opens new avenues for organizations and incentives, that promise greater autonomy, innovation, and collective progress. It represents an empowering shift, where the path to freedom has become more accessible than ever
 
 Build your dream with Line.
