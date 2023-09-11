@@ -1,6 +1,6 @@
 # Line
 
-In the 1940s, Peter Drucker posed the question 'What is an organization?'. Today, the question has never been more pertinent, as we witness transformative changes that redefine the very nature of organizations and reshape how we collectively organize our efforts. Traditional notions of centralization are being challenged as we observe the rise of remote work, open-source based businesses, freelancing, digital nomadism, permissionless protocols, and network communities.
+Today, the question of 'What is an organization?' has never been more relevant, as we witness transformative changes that redefine the very nature of organizations and reshape how we collectively organize our efforts. Traditional notions of centralization are being challenged as we observe the rise of remote work, open-source based businesses, freelancing, digital nomadism, permissionless protocols, and network communities.
 
 These dynamics foster collaboration beyond the confines of jurisdiction and traditional institutions, opening up new opportunities for collective cooperation. Decentralized organizations and communities promote autonomy, flexibility, and diverse contributions, departing from traditional hierarchies.
 
