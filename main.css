@@ -69,28 +69,32 @@ body.dark {
 /* Light Theme Styles */
 /* line 81, /Users/kylemann/Desktop/line/main.scss */
 body.light {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   color: #000000; }
-  /* line 85, /Users/kylemann/Desktop/line/main.scss */
+  /* line 84, /Users/kylemann/Desktop/line/main.scss */
+  body.light a {
+    color: #000000;
+    text-decoration: underline; }
+  /* line 89, /Users/kylemann/Desktop/line/main.scss */
   body.light .toggleHeader {
     color: #000000;
     /* Light mode text color */ }
 
 /* Common Styles for both Themes */
-/* line 91, /Users/kylemann/Desktop/line/main.scss */
+/* line 95, /Users/kylemann/Desktop/line/main.scss */
 .toggleHeader {
   cursor: pointer;
   text-decoration: underline;
   font-size: .85em;
   font-weight: 400; }
-  /* line 96, /Users/kylemann/Desktop/line/main.scss */
+  /* line 100, /Users/kylemann/Desktop/line/main.scss */
   .toggleHeader:after {
     content: " [+]"; }
-  /* line 99, /Users/kylemann/Desktop/line/main.scss */
+  /* line 103, /Users/kylemann/Desktop/line/main.scss */
   .toggleHeader.open:after {
     content: " [-]"; }
 
-/* line 104, /Users/kylemann/Desktop/line/main.scss */
+/* line 108, /Users/kylemann/Desktop/line/main.scss */
 #expandableContent {
   display: none;
   transition: max-height 0.3s ease-out;
@@ -98,21 +102,21 @@ body.light {
   max-height: 0;
   margin-top: -1em;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
-  /* line 113, /Users/kylemann/Desktop/line/main.scss */
+  box-shadow: none; }
+  /* line 117, /Users/kylemann/Desktop/line/main.scss */
   #expandableContent.open {
     display: block;
     max-height: 1000px;
     /* Approximate max height */ }
 
-/* line 119, /Users/kylemann/Desktop/line/main.scss */
+/* line 123, /Users/kylemann/Desktop/line/main.scss */
 .expandable-content {
   margin-top: 0em;
   padding: 0em;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+  box-shadow: none; }
 
-/* line 126, /Users/kylemann/Desktop/line/main.scss */
+/* line 130, /Users/kylemann/Desktop/line/main.scss */
 body.dark {
   background-color: #000000;
   color: #ffffff; }

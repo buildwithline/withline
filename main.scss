@@ -79,8 +79,12 @@ body.dark {
 
 /* Light Theme Styles */
 body.light {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   color: #000000;
+    a {
+       color: #000000;
+        text-decoration: underline;
+    }
 
   .toggleHeader {
     color: #000000; /* Light mode text color */
@@ -109,7 +113,7 @@ body.light {
   margin-top: -1em;
 //  padding: 1em;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   &.open {
     display: block;
     max-height: 1000px; /* Approximate max height */
@@ -120,17 +124,10 @@ body.light {
   margin-top: 0em;
   padding: 0em;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 body.dark {
   background-color: #000000;
   color: #ffffff;
-
-  .main {
-    .expandable-content {
-//      background-color: #333333; 
-//        background-color: pink;
-    }
-  }
 }
