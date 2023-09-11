@@ -1,80 +1,118 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* line 6, /Users/kylemann/Desktop/line/main.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-/* line 27, /Users/kylemann/Desktop/line/main.scss */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-/* line 31, /Users/kylemann/Desktop/line/main.scss */
-body {
-  line-height: 1; }
-
-/* line 34, /Users/kylemann/Desktop/line/main.scss */
-ol, ul {
-  list-style: none; }
-
-/* line 37, /Users/kylemann/Desktop/line/main.scss */
-blockquote, q {
-  quotes: none; }
-
-/* line 40, /Users/kylemann/Desktop/line/main.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-/* line 45, /Users/kylemann/Desktop/line/main.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* line 50, /Users/kylemann/Desktop/line/main.scss */
+/* line 1, /Users/kylemann/Desktop/line/main.scss */
 body {
   font-family: 'Inter', sans-serif;
   width: 100%; }
-  /* line 54, /Users/kylemann/Desktop/line/main.scss */
-  body .main {
-    padding: 8em 4em;
-    margin: 0 auto;
-    max-width: 35em; }
-    /* line 58, /Users/kylemann/Desktop/line/main.scss */
-    body .main .header {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 2em; }
-    /* line 64, /Users/kylemann/Desktop/line/main.scss */
-    body .main p {
-      line-height: 1.65;
-      font-size: .85em;
-      margin-top: 1.25em; }
 
-/* Dark theme styles */
-/* line 74, /Users/kylemann/Desktop/line/main.scss */
+/* line 6, /Users/kylemann/Desktop/line/main.scss */
+.main {
+  padding: 8em 4em;
+  margin: 0 auto;
+  max-width: 37em; }
+  /* line 11, /Users/kylemann/Desktop/line/main.scss */
+  .main hr {
+    border: 0;
+    height: 1px;
+    background: #515151;
+    margin-top: 2em;
+    margin-bottom: 2em; }
+  /* line 19, /Users/kylemann/Desktop/line/main.scss */
+  .main a {
+    text-decoration-color: #ffffff;
+    color: #ffffff; }
+  /* line 24, /Users/kylemann/Desktop/line/main.scss */
+  .main .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em; }
+  /* line 31, /Users/kylemann/Desktop/line/main.scss */
+  .main p {
+    line-height: 1.65;
+    font-size: .85em;
+    margin-top: 1.25em; }
+  /* line 37, /Users/kylemann/Desktop/line/main.scss */
+  .main h2, .main h3, .main h4, .main h5, .main h6 {
+    margin-top: 2em;
+    margin-bottom: 1em; }
+  /* line 42, /Users/kylemann/Desktop/line/main.scss */
+  .main h2 {
+    font-size: 1.3em;
+    font-weight: 700; }
+  /* line 47, /Users/kylemann/Desktop/line/main.scss */
+  .main h3 {
+    font-size: 1.1em; }
+  /* line 51, /Users/kylemann/Desktop/line/main.scss */
+  .main h4, .main h5, .main h6 {
+    font-size: 0.85em; }
+  /* line 55, /Users/kylemann/Desktop/line/main.scss */
+  .main ul, .main ol {
+    font-size: 0.85em;
+    margin-top: 1.25em;
+    margin-left: 2em; }
+  /* line 61, /Users/kylemann/Desktop/line/main.scss */
+  .main li {
+    margin-bottom: 0.5em; }
+  /* line 65, /Users/kylemann/Desktop/line/main.scss */
+  .main .scenario {
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-left: 1em;
+    border-left: 3px solid #ccc;
+    padding-left: 0.5em; }
+
+/* Dark Theme Styles */
+/* line 75, /Users/kylemann/Desktop/line/main.scss */
+body.dark {
+  background-color: #000000;
+  color: #ffffff; }
+
+/* Light Theme Styles */
+/* line 81, /Users/kylemann/Desktop/line/main.scss */
+body.light {
+  background-color: #f9f9f9;
+  color: #000000; }
+  /* line 85, /Users/kylemann/Desktop/line/main.scss */
+  body.light .toggleHeader {
+    color: #000000;
+    /* Light mode text color */ }
+
+/* Common Styles for both Themes */
+/* line 91, /Users/kylemann/Desktop/line/main.scss */
+.toggleHeader {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: .85em;
+  font-weight: 400; }
+  /* line 96, /Users/kylemann/Desktop/line/main.scss */
+  .toggleHeader:after {
+    content: " [+]"; }
+  /* line 99, /Users/kylemann/Desktop/line/main.scss */
+  .toggleHeader.open:after {
+    content: " [-]"; }
+
+/* line 104, /Users/kylemann/Desktop/line/main.scss */
+#expandableContent {
+  display: none;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  margin-top: -1em;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+  /* line 113, /Users/kylemann/Desktop/line/main.scss */
+  #expandableContent.open {
+    display: block;
+    max-height: 1000px;
+    /* Approximate max height */ }
+
+/* line 119, /Users/kylemann/Desktop/line/main.scss */
+.expandable-content {
+  margin-top: 0em;
+  padding: 0em;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+
+/* line 126, /Users/kylemann/Desktop/line/main.scss */
 body.dark {
   background-color: #000000;
   color: #ffffff; }
