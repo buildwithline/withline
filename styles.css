@@ -1,0 +1,138 @@
+/* line 1, /Users/kylemann/Desktop/line/styles.scss */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15em;
+  width: 100%;
+  box-sizing: border-box; }
+
+/* line 10, /Users/kylemann/Desktop/line/styles.scss */
+.main {
+  padding: 2em 4em;
+  margin: 0 auto;
+  max-width: 40em; }
+  /* line 15, /Users/kylemann/Desktop/line/styles.scss */
+  .main p {
+    line-height: 1.75;
+    font-size: 1em;
+    margin-top: 1.25em; }
+
+/* line 22, /Users/kylemann/Desktop/line/styles.scss */
+.img-container {
+  text-align: center; }
+
+/* line 26, /Users/kylemann/Desktop/line/styles.scss */
+.slide_logo {
+  width: 12em;
+  margin: 4em auto; }
+
+/* line 33, /Users/kylemann/Desktop/line/styles.scss */
+.slides .slide {
+  display: none; }
+  /* line 36, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide.active {
+    display: block; }
+  /* line 40, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide h2 {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    text-align: center; }
+  /* line 49, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide h3 {
+    font-size: 1em; }
+  /* line 53, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide h4, .slides .slide h5, .slides .slide h6 {
+    font-size: .85em;
+    font-weight: 700; }
+  /* line 58, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide ul, .slides .slide ol {
+    font-size: .85em;
+    line-height: 1.5;
+    margin-top: 1.25em;
+    margin-left: 2em; }
+  /* line 65, /Users/kylemann/Desktop/line/styles.scss */
+  .slides .slide li {
+    margin-bottom: 0.5em; }
+
+/* line 71, /Users/kylemann/Desktop/line/styles.scss */
+.buttons {
+  position: fixed;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; }
+  /* line 78, /Users/kylemann/Desktop/line/styles.scss */
+  .buttons button + button {
+    margin-left: 0.5em; }
+  /* line 82, /Users/kylemann/Desktop/line/styles.scss */
+  .buttons button {
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    border-radius: 0;
+    text-decoration: none; }
+
+/* line 91, /Users/kylemann/Desktop/line/styles.scss */
+body.dark .buttons button {
+  background-color: #ffffff;
+  color: #000000; }
+
+/* line 96, /Users/kylemann/Desktop/line/styles.scss */
+body.light .buttons button {
+  background-color: #000000;
+  color: #ffffff; }
+
+/* line 101, /Users/kylemann/Desktop/line/styles.scss */
+#slideCounter {
+  margin-left: 10px;
+  /* Or whatever distance you prefer */
+  font-size: .75em;
+  font-weight: 700; }
+
+/* line 107, /Users/kylemann/Desktop/line/styles.scss */
+.theme-toggle-wrapper {
+  display: inline-block;
+  margin-left: 20px;
+  /* Add space between buttons and toggle */ }
+
+/* line 114, /Users/kylemann/Desktop/line/styles.scss */
+.theme-icon {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle; }
+
+/* line 121, /Users/kylemann/Desktop/line/styles.scss */
+.theme-icon img {
+  width: 24px;
+  /* Adjust based on your preference */
+  height: 24px;
+  /* Adjust based on your preference */ }
+
+/* line 128, /Users/kylemann/Desktop/line/styles.scss */
+body.dark {
+  background-color: #000000;
+  color: #ffffff; }
+  /* line 132, /Users/kylemann/Desktop/line/styles.scss */
+  body.dark a {
+    color: #ffffff;
+    text-decoration-color: #ffffff; }
+
+/* line 139, /Users/kylemann/Desktop/line/styles.scss */
+body.light {
+  background-color: #ffffff;
+  color: #000000; }
+  /* line 143, /Users/kylemann/Desktop/line/styles.scss */
+  body.light a {
+    color: #000000;
+    text-decoration: underline; }
+
+/* line 150, /Users/kylemann/Desktop/line/styles.scss */
+.toggleHeader, .buttons button {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: .85em;
+  font-weight: 400; }
+
+/*# sourceMappingURL=styles.css.map */
