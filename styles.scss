@@ -10,7 +10,8 @@ body {
 .main {
   padding: 2em 4em;
   margin: 0 auto;
-  max-width: 40em; // Make slides wider
+  max-width: 36em; // Make slides wider
+
     
       p {
     line-height: 1.75;  // Slightly increased line height
@@ -24,8 +25,8 @@ body {
 }
 
 .slide_logo {
-    width: 12em;
-    margin: 4em auto;
+    width: 16em;
+    margin: 8em auto 4em auto;
 }
 
 
@@ -43,7 +44,7 @@ body {
       margin-top: 2em;
       margin-bottom: 1em;
          font-weight: 700;
-        text-align: center;
+        text-align: left;
     }
       
   h3 {
@@ -59,11 +60,11 @@ body {
       font-size: .85em;
         line-height: 1.5;
       margin-top: 1.25em;
-      margin-left: 2em;
+      margin-left: 0em;
     }
 
     li {
-      margin-bottom: 0.5em;
+      margin-bottom: .5em;
     }
   }
 }
