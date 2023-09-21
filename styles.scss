@@ -10,7 +10,11 @@ body {
 .main {
   padding: 2em 4em;
   margin: 0 auto;
-  max-width: 36em; // Make slides wider
+  max-width: 50em; // Make slides wider
+
+       img {
+        width: 100%;
+    }
 
     
       p {
@@ -26,13 +30,14 @@ body {
 
 .slide_logo {
     width: 16em;
-    margin: 8em auto 4em auto;
+    margin: 8em auto 0em auto;
 }
 
 
 .slides {
   .slide {
     display: none;
+      padding-bottom: 10em;
 
     &.active {
       display: block;
