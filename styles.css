@@ -9,126 +9,131 @@ body {
 .main {
   padding: 2em 4em;
   margin: 0 auto;
-  max-width: 36em; }
-  /* line 16, /Users/kylemann/Desktop/line/styles.scss */
+  max-width: 55em; }
+  /* line 15, /Users/kylemann/Desktop/line/styles.scss */
+  .main img {
+    width: 100%; }
+  /* line 20, /Users/kylemann/Desktop/line/styles.scss */
   .main p {
     line-height: 1.75;
-    font-size: 1em;
+    font-size: 1.5em;
     margin-top: 1.25em; }
 
-/* line 23, /Users/kylemann/Desktop/line/styles.scss */
+/* line 27, /Users/kylemann/Desktop/line/styles.scss */
 .img-container {
   text-align: center; }
 
-/* line 27, /Users/kylemann/Desktop/line/styles.scss */
+/* line 31, /Users/kylemann/Desktop/line/styles.scss */
 .slide_logo {
   width: 16em;
-  margin: 8em auto 4em auto; }
+  margin: 8em auto 0em auto; }
 
-/* line 34, /Users/kylemann/Desktop/line/styles.scss */
+/* line 38, /Users/kylemann/Desktop/line/styles.scss */
 .slides .slide {
-  display: none; }
-  /* line 37, /Users/kylemann/Desktop/line/styles.scss */
+  display: none;
+  padding-bottom: 10em; }
+  /* line 42, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide.active {
     display: block; }
-  /* line 41, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 46, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h2 {
-    font-size: 1.75em;
+    font-size: 2.5em;
     font-weight: 700;
     margin-top: 2em;
     margin-bottom: 1em;
     font-weight: 700;
     text-align: left; }
-  /* line 50, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 55, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h3 {
-    font-size: 1em; }
-  /* line 54, /Users/kylemann/Desktop/line/styles.scss */
+    font-size: 1.65em; }
+  /* line 60, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h4, .slides .slide h5, .slides .slide h6 {
     font-size: .85em;
     font-weight: 700; }
-  /* line 59, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 65, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide ul, .slides .slide ol {
     font-size: .85em;
     line-height: 1.5;
     margin-top: 1.25em;
     margin-left: 0em; }
-  /* line 66, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 72, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide li {
-    margin-bottom: .5em; }
+    margin-bottom: .5em;
+    font-size: 1.45em; }
 
-/* line 72, /Users/kylemann/Desktop/line/styles.scss */
+/* line 79, /Users/kylemann/Desktop/line/styles.scss */
 .buttons {
   position: fixed;
   bottom: 2em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999; }
-  /* line 79, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 86, /Users/kylemann/Desktop/line/styles.scss */
   .buttons button + button {
     margin-left: 0.5em; }
-  /* line 83, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 90, /Users/kylemann/Desktop/line/styles.scss */
   .buttons button {
     font-size: 1.5em;
     padding: 0.5em 1em;
     border-radius: 0;
     text-decoration: none; }
 
-/* line 92, /Users/kylemann/Desktop/line/styles.scss */
+/* line 99, /Users/kylemann/Desktop/line/styles.scss */
 body.dark .buttons button {
   background-color: #ffffff;
   color: #000000; }
 
-/* line 97, /Users/kylemann/Desktop/line/styles.scss */
+/* line 104, /Users/kylemann/Desktop/line/styles.scss */
 body.light .buttons button {
   background-color: #000000;
   color: #ffffff; }
 
-/* line 102, /Users/kylemann/Desktop/line/styles.scss */
+/* line 109, /Users/kylemann/Desktop/line/styles.scss */
 #slideCounter {
   margin-left: 10px;
   /* Or whatever distance you prefer */
   font-size: .75em;
   font-weight: 700; }
 
-/* line 108, /Users/kylemann/Desktop/line/styles.scss */
+/* line 115, /Users/kylemann/Desktop/line/styles.scss */
 .theme-toggle-wrapper {
   display: inline-block;
   margin-left: 20px;
   /* Add space between buttons and toggle */ }
 
-/* line 115, /Users/kylemann/Desktop/line/styles.scss */
+/* line 122, /Users/kylemann/Desktop/line/styles.scss */
 .theme-icon {
   display: inline-block;
   cursor: pointer;
   margin-right: 10px;
   vertical-align: middle; }
 
-/* line 122, /Users/kylemann/Desktop/line/styles.scss */
+/* line 129, /Users/kylemann/Desktop/line/styles.scss */
 .theme-icon img {
   width: 24px;
   /* Adjust based on your preference */
   height: 24px;
   /* Adjust based on your preference */ }
 
-/* line 129, /Users/kylemann/Desktop/line/styles.scss */
+/* line 136, /Users/kylemann/Desktop/line/styles.scss */
 body.dark {
   background-color: #000000;
   color: #ffffff; }
-  /* line 133, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 140, /Users/kylemann/Desktop/line/styles.scss */
   body.dark a {
     color: #ffffff;
     text-decoration-color: #ffffff; }
 
-/* line 140, /Users/kylemann/Desktop/line/styles.scss */
+/* line 147, /Users/kylemann/Desktop/line/styles.scss */
 body.light {
   background-color: #ffffff;
   color: #000000; }
-  /* line 144, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 151, /Users/kylemann/Desktop/line/styles.scss */
   body.light a {
     color: #000000;
     text-decoration: underline; }
 
-/* line 151, /Users/kylemann/Desktop/line/styles.scss */
+/* line 158, /Users/kylemann/Desktop/line/styles.scss */
 .toggleHeader, .buttons button {
   cursor: pointer;
   text-decoration: underline;
