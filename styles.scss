@@ -1,229 +1,256 @@
 body {
-  font-family: 'Inter', sans-serif;
- font-size: 1.15em;
-  width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15em;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
-    
+
 }
 
-    #slide-nav {
+#slide-nav {
 
 
-//        position: fixed; 
-    
-//  transform: translateY(-50%);
-  list-style: none; 
-   margin: 0; 
-padding: 7em 4em 0 0;
+    //        position: fixed; 
+
+    //  transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 7em 4em 0 0;
 
 
-    
+
 }
 
 .nav-button {
-  background: none; /* Remove background */
-  border: none;     /* Remove border */
-  cursor: pointer;  /* Add cursor pointer for better UX */
-  padding: 0px;    /* Add some padding */
-  margin-bottom: .75em; /* Add margin between items */
-  color: inherit;   /* Inherit text color from parent */
-  font: inherit;    /* Inherit font from parent */
-  text-align: left; /* Align text to the left */
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Add cursor pointer for better UX */
+    padding: 0px;
+    /* Add some padding */
+    margin-bottom: .75em;
+    /* Add margin between items */
+    color: inherit;
+    /* Inherit text color from parent */
+    font: inherit;
+    /* Inherit font from parent */
+    text-align: left;
+    /* Align text to the left */
     font-size: .75em;
     color: lightgray;
-     white-space: nowrap;
-    &.light {
-    color: darkgray; // Change text color for light mode
-  }
+    white-space: nowrap;
 
-  &.dark {
-    color: lightgray; // Change text color for dark mode
-  }
-  }
+    &.light {
+        color: darkgray; // Change text color for light mode
+    }
+
+    &.dark {
+        color: lightgray; // Change text color for dark mode
+    }
+}
 
 .nav-button:hover {
-  text-decoration: underline; /* Add underline on hover for better UX */
+    text-decoration: underline;
+    /* Add underline on hover for better UX */
     color: white;
-     &.light {
-    color: black; // Change text color for light mode on hover
-  }
 
-  &.dark {
-    color: white; // Change text color for dark mode on hover
-  }
+    &.light {
+        color: black; // Change text color for light mode on hover
+    }
+
+    &.dark {
+        color: white; // Change text color for dark mode on hover
+    }
 }
 
 .nav-button.active {
-  font-weight: bold; /* Make active button bold */
-text-decoration: underline;
+    font-weight: bold;
+    /* Make active button bold */
+    text-decoration: underline;
     color: white;
-    &.light {
-    color: #000000; // Change text color for light mode when active
-  }
 
-  &.dark {
-    color: #ffffff; // Change text color for dark mode when active
-  }
+    &.light {
+        color: #000000; // Change text color for light mode when active
+    }
+
+    &.dark {
+        color: #ffffff; // Change text color for dark mode when active
+    }
 }
 
 // Styles for Slide Deck
 .main {
 
-  padding: 2em 4em;
+    padding: 2em 4em;
     padding-right: 120px;
-  margin: 0 auto;
-width: 100%;
+    margin: 0 auto;
+    width: 100%;
 
-       img {
+    img {
         width: 100%;
     }
 
-    
-      p {
-    line-height: 1.5;  // Slightly increased line height
-    font-size: 1.5em;  // Increased body font size
-//    margin-top: 1.25em;
-  }
+
+    p {
+        line-height: 1.5; // Slightly increased line height
+        font-size: 1.5em; // Increased body font size
+        //    margin-top: 1.25em;
+    }
 }
 
 .img-container {
-  text-align: center;
+    text-align: center;
 }
 
 .slide_logo {
     width: 16em;
     margin: 8em auto 0em auto;
+
+}
+
+#slide1 {
+    max-width: 32em;
+    margin: 0 auto;
 }
 
 
 .slides {
-  .slide {
-    display: none;
-      padding-bottom: 10em;
+    .slide {
+        display: none;
+        padding-bottom: 10em;
         width: 100%;
-  max-width: 56em; 
+        max-width: 56em;
 
-    &.active {
-      display: block;
+        &.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 1.35em; // Increased header font size
+            margin-top: 1.5em;
+
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: .85em;
+            font-weight: 700;
+        }
+
+        ul,
+        ol {
+            font-size: .85em;
+            line-height: 1.5;
+            margin-top: 1.25em;
+            margin-left: 0em;
+        }
+
+        li {
+            margin-bottom: .5em;
+            font-size: 1.45em;
+        }
     }
-
-    h2 {
-      font-size: 2.5em;
-      font-weight: 700;
-      margin-top: 2em;
-      margin-bottom: 1em;
-         font-weight: 700;
-        text-align: left;
-    }
-      
-  h3 {
-    font-size: 1.35em;  // Increased header font size
-         margin-top: 1.5em;
-      
-  }
-
-  h4, h5, h6 {
-    font-size: .85em; 
-      font-weight: 700;
-  }
-
-    ul, ol {
-      font-size: .85em;
-        line-height: 1.5;
-      margin-top: 1.25em;
-      margin-left: 0em;
-    }
-
-    li {
-      margin-bottom: .5em;
-        font-size: 1.45em;
-    }
-  }
 }
 
 .buttons {
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
-//  transform: translateX(-50%);
-  z-index: 999;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    //  transform: translateX(-50%);
+    z-index: 999;
 
-  button + button {
-    margin-left: 0.5em;
-  }
+    button + button {
+        margin-left: 0.5em;
+    }
 
-  button {
-    font-size: 1.5em;
-    padding: 0.5em 1em;
-    border-radius: 0;
-    text-decoration: none;
-  }
+    button {
+        font-size: 1.5em;
+        padding: 0.5em 1em;
+        border-radius: 0;
+        text-decoration: none;
+    }
 }
 
 // Add these for dark and light modes
 body.dark .buttons button {
-  background-color: #ffffff; // or any color that makes it visible on dark background
-  color: #000000; // text color for dark mode
+    background-color: #ffffff; // or any color that makes it visible on dark background
+    color: #000000; // text color for dark mode
 }
 
 body.light .buttons button {
-  background-color: #000000; // or any color that makes it visible on light background
-  color: #ffffff; // text color for light mode
+    background-color: #000000; // or any color that makes it visible on light background
+    color: #ffffff; // text color for light mode
 }
 
 #slideCounter {
-  margin-left: 10px; /* Or whatever distance you prefer */
+    margin-left: 10px;
+    /* Or whatever distance you prefer */
     font-size: .75em;
     font-weight: 700;
 }
 
 .theme-toggle-wrapper {
-  display: inline-block;
-  margin-left: 20px; /* Add space between buttons and toggle */
+    display: inline-block;
+    margin-left: 20px;
+    /* Add space between buttons and toggle */
 }
 
 // dark theme manual toggle
 
 .theme-icon {
-  display: inline-block;
-  cursor: pointer;
-  margin-right: 10px;
-  vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .theme-icon img {
-  width: 24px; /* Adjust based on your preference */
-  height: 24px; /* Adjust based on your preference */
+    width: 24px;
+    /* Adjust based on your preference */
+    height: 24px;
+    /* Adjust based on your preference */
 }
 
 
 // Dark Theme Styles
 body.dark {
-  background-color: #000000;
-  color: #ffffff;
-
-  a {
+    background-color: #000000;
     color: #ffffff;
-    text-decoration-color: #ffffff;
-  }
+
+    a {
+        color: #ffffff;
+        text-decoration-color: #ffffff;
+    }
 }
 
 // Light Theme Styles
 body.light {
-  background-color: #ffffff;
-  color: #000000;
-  
-  a {
+    background-color: #ffffff;
     color: #000000;
-    text-decoration: underline;
-  }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
 }
 
 // Common Styles for both Themes
-.toggleHeader, .buttons button {
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: .85em;
-  font-weight: 400;
+.toggleHeader,
+.buttons button {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: .85em;
+    font-weight: 400;
 }
