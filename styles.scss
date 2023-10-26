@@ -10,7 +10,7 @@ body {
 .main {
   padding: 2em 4em;
   margin: 0 auto;
-  max-width: 55em; // Make slides wider
+  max-width: 56em; // Make slides wider
 
        img {
         width: 100%;
@@ -18,9 +18,9 @@ body {
 
     
       p {
-    line-height: 1.75;  // Slightly increased line height
+    line-height: 1.5;  // Slightly increased line height
     font-size: 1.5em;  // Increased body font size
-    margin-top: 1.25em;
+//    margin-top: 1.25em;
   }
 }
 
@@ -53,7 +53,8 @@ body {
     }
       
   h3 {
-    font-size: 1.65em;  // Increased header font size
+    font-size: 1.35em;  // Increased header font size
+         margin-top: 1.5em;
       
   }
 
