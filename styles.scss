@@ -3,14 +3,77 @@ body {
  font-size: 1.15em;
   width: 100%;
     box-sizing: border-box;
+    display: flex;
+    
 }
 
+    #slide-nav {
+
+
+//        position: fixed; 
+    
+//  transform: translateY(-50%);
+  list-style: none; 
+   margin: 0; 
+padding: 7em 4em 0 0;
+
+
+    
+}
+
+.nav-button {
+  background: none; /* Remove background */
+  border: none;     /* Remove border */
+  cursor: pointer;  /* Add cursor pointer for better UX */
+  padding: 0px;    /* Add some padding */
+  margin-bottom: .75em; /* Add margin between items */
+  color: inherit;   /* Inherit text color from parent */
+  font: inherit;    /* Inherit font from parent */
+  text-align: left; /* Align text to the left */
+    font-size: .75em;
+    color: lightgray;
+     white-space: nowrap;
+    &.light {
+    color: darkgray; // Change text color for light mode
+  }
+
+  &.dark {
+    color: lightgray; // Change text color for dark mode
+  }
+  }
+
+.nav-button:hover {
+  text-decoration: underline; /* Add underline on hover for better UX */
+    color: white;
+     &.light {
+    color: black; // Change text color for light mode on hover
+  }
+
+  &.dark {
+    color: white; // Change text color for dark mode on hover
+  }
+}
+
+.nav-button.active {
+  font-weight: bold; /* Make active button bold */
+text-decoration: underline;
+    color: white;
+    &.light {
+    color: #000000; // Change text color for light mode when active
+  }
+
+  &.dark {
+    color: #ffffff; // Change text color for dark mode when active
+  }
+}
 
 // Styles for Slide Deck
 .main {
+
   padding: 2em 4em;
+    padding-right: 120px;
   margin: 0 auto;
-  max-width: 56em; // Make slides wider
+
 
        img {
         width: 100%;
@@ -38,6 +101,8 @@ body {
   .slide {
     display: none;
       padding-bottom: 10em;
+        width: 100%;
+  max-width: 56em; 
 
     &.active {
       display: block;
@@ -80,8 +145,8 @@ body {
 .buttons {
   position: fixed;
   bottom: 2em;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 2em;
+//  transform: translateX(-50%);
   z-index: 999;
 
   button + button {

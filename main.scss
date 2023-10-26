@@ -7,6 +7,47 @@ body {
   padding: 8em 4em;
   margin: 0 auto;
   max-width: 37em;
+#slide-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav-button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  text-align: center;
+  max-width: 150px; /* adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
+
+.nav-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
     img {
         width: 100%;
     }
