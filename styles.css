@@ -10,9 +10,9 @@ body {
 #slide-nav {
   list-style: none;
   margin: 0;
-  padding: 7em 4em 0 0; }
+  padding: 5em 4em 0 0; }
 
-/* line 24, /Users/kylemann/Desktop/line/styles.scss */
+/* line 17, /Users/kylemann/Desktop/line/styles.scss */
 .nav-button {
   background: none;
   /* Remove background */
@@ -22,7 +22,7 @@ body {
   /* Add cursor pointer for better UX */
   padding: 0px;
   /* Add some padding */
-  margin-bottom: .75em;
+  margin-bottom: 1em;
   /* Add margin between items */
   color: inherit;
   /* Inherit text color from parent */
@@ -33,76 +33,62 @@ body {
   font-size: .75em;
   color: lightgray;
   white-space: nowrap; }
-  /* line 45, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 38, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button.light {
     color: darkgray; }
-  /* line 49, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 42, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button.dark {
     color: lightgray; }
 
-/* line 54, /Users/kylemann/Desktop/line/styles.scss */
+/* line 47, /Users/kylemann/Desktop/line/styles.scss */
 .nav-button:hover {
   text-decoration: underline;
   /* Add underline on hover for better UX */
   color: white; }
-  /* line 59, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 52, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button:hover.light {
     color: black; }
-  /* line 63, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 56, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button:hover.dark {
     color: white; }
 
-/* line 68, /Users/kylemann/Desktop/line/styles.scss */
+/* line 61, /Users/kylemann/Desktop/line/styles.scss */
 .nav-button.active {
   font-weight: bold;
   /* Make active button bold */
   text-decoration: underline;
   color: white; }
-  /* line 74, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 67, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button.active.light {
     color: #000000; }
-  /* line 78, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 71, /Users/kylemann/Desktop/line/styles.scss */
   .nav-button.active.dark {
     color: #ffffff; }
 
-/* line 84, /Users/kylemann/Desktop/line/styles.scss */
+/* line 77, /Users/kylemann/Desktop/line/styles.scss */
 .main {
-  padding: 2em 4em;
-  padding-right: 120px;
+  padding: 0 4em;
+  padding-right: 0;
   margin: 0 auto;
   width: 100%; }
-  /* line 91, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 85, /Users/kylemann/Desktop/line/styles.scss */
   .main img {
     width: 100%; }
-  /* line 96, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 90, /Users/kylemann/Desktop/line/styles.scss */
   .main p {
     line-height: 1.5;
     font-size: 1.5em; }
 
-/* line 103, /Users/kylemann/Desktop/line/styles.scss */
-.img-container {
-  text-align: center; }
-
-/* line 107, /Users/kylemann/Desktop/line/styles.scss */
-.slide_logo {
-  width: 16em;
-  margin: 8em auto 0em auto; }
-
-/* line 113, /Users/kylemann/Desktop/line/styles.scss */
-#slide1 {
-  max-width: 32em;
-  margin: 0 auto; }
-
-/* line 120, /Users/kylemann/Desktop/line/styles.scss */
+/* line 102, /Users/kylemann/Desktop/line/styles.scss */
 .slides .slide {
   display: none;
-  padding-bottom: 10em;
+  padding-bottom: 4em;
   width: 100%;
-  max-width: 56em; }
-  /* line 126, /Users/kylemann/Desktop/line/styles.scss */
+  max-width: 60em; }
+  /* line 107, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide.active {
     display: block; }
-  /* line 130, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 111, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h2 {
     font-size: 2.5em;
     font-weight: 700;
@@ -110,100 +96,126 @@ body {
     margin-bottom: 1em;
     font-weight: 700;
     text-align: left; }
-  /* line 139, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 120, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h3 {
     font-size: 1.35em;
     margin-top: 1.5em; }
-  /* line 145, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 126, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide h4,
   .slides .slide h5,
   .slides .slide h6 {
     font-size: .85em;
     font-weight: 700; }
-  /* line 152, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 133, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide ul,
   .slides .slide ol {
     font-size: .85em;
     line-height: 1.5;
     margin-top: 1.25em;
     margin-left: 0em; }
-  /* line 160, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 141, /Users/kylemann/Desktop/line/styles.scss */
   .slides .slide li {
     margin-bottom: .5em;
     font-size: 1.45em; }
 
-/* line 167, /Users/kylemann/Desktop/line/styles.scss */
+/* line 148, /Users/kylemann/Desktop/line/styles.scss */
 .buttons {
   position: fixed;
   bottom: 2em;
   right: 2em;
   z-index: 999; }
-  /* line 174, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 155, /Users/kylemann/Desktop/line/styles.scss */
   .buttons button + button {
     margin-left: 0.5em; }
-  /* line 178, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 159, /Users/kylemann/Desktop/line/styles.scss */
   .buttons button {
     font-size: 1.5em;
     padding: 0.5em 1em;
     border-radius: 0;
     text-decoration: none; }
 
-/* line 187, /Users/kylemann/Desktop/line/styles.scss */
+/* line 168, /Users/kylemann/Desktop/line/styles.scss */
+#slide1 {
+  position: relative;
+  height: 100vh;
+  max-width: 100%; }
+  /* line 172, /Users/kylemann/Desktop/line/styles.scss */
+  #slide1 .center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  /* line 180, /Users/kylemann/Desktop/line/styles.scss */
+  #slide1 .img-container {
+    margin-bottom: 1em; }
+  /* line 184, /Users/kylemann/Desktop/line/styles.scss */
+  #slide1 p {
+    font-size: 1.5em;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: -1em; }
+
+/* line 192, /Users/kylemann/Desktop/line/styles.scss */
+.slide_logo {
+  width: 16em; }
+
+/* line 200, /Users/kylemann/Desktop/line/styles.scss */
 body.dark .buttons button {
   background-color: #ffffff;
   color: #000000; }
 
-/* line 192, /Users/kylemann/Desktop/line/styles.scss */
+/* line 205, /Users/kylemann/Desktop/line/styles.scss */
 body.light .buttons button {
   background-color: #000000;
   color: #ffffff; }
 
-/* line 197, /Users/kylemann/Desktop/line/styles.scss */
+/* line 210, /Users/kylemann/Desktop/line/styles.scss */
 #slideCounter {
   margin-left: 10px;
   /* Or whatever distance you prefer */
   font-size: .75em;
   font-weight: 700; }
 
-/* line 204, /Users/kylemann/Desktop/line/styles.scss */
+/* line 217, /Users/kylemann/Desktop/line/styles.scss */
 .theme-toggle-wrapper {
   display: inline-block;
   margin-left: 20px;
   /* Add space between buttons and toggle */ }
 
-/* line 212, /Users/kylemann/Desktop/line/styles.scss */
+/* line 225, /Users/kylemann/Desktop/line/styles.scss */
 .theme-icon {
   display: inline-block;
   cursor: pointer;
   margin-right: 10px;
   vertical-align: middle; }
 
-/* line 219, /Users/kylemann/Desktop/line/styles.scss */
+/* line 232, /Users/kylemann/Desktop/line/styles.scss */
 .theme-icon img {
   width: 24px;
   /* Adjust based on your preference */
   height: 24px;
   /* Adjust based on your preference */ }
 
-/* line 228, /Users/kylemann/Desktop/line/styles.scss */
+/* line 241, /Users/kylemann/Desktop/line/styles.scss */
 body.dark {
   background-color: #000000;
   color: #ffffff; }
-  /* line 232, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 245, /Users/kylemann/Desktop/line/styles.scss */
   body.dark a {
     color: #ffffff;
     text-decoration-color: #ffffff; }
 
-/* line 239, /Users/kylemann/Desktop/line/styles.scss */
+/* line 252, /Users/kylemann/Desktop/line/styles.scss */
 body.light {
   background-color: #ffffff;
   color: #000000; }
-  /* line 243, /Users/kylemann/Desktop/line/styles.scss */
+  /* line 256, /Users/kylemann/Desktop/line/styles.scss */
   body.light a {
     color: #000000;
     text-decoration: underline; }
 
-/* line 250, /Users/kylemann/Desktop/line/styles.scss */
+/* line 263, /Users/kylemann/Desktop/line/styles.scss */
 .toggleHeader,
 .buttons button {
   cursor: pointer;

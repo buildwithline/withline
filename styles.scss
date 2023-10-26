@@ -9,16 +9,9 @@ body {
 
 #slide-nav {
 
-
-    //        position: fixed; 
-
-    //  transform: translateY(-50%);
     list-style: none;
     margin: 0;
-    padding: 7em 4em 0 0;
-
-
-
+    padding: 5em 4em 0 0;
 }
 
 .nav-button {
@@ -30,7 +23,7 @@ body {
     /* Add cursor pointer for better UX */
     padding: 0px;
     /* Add some padding */
-    margin-bottom: .75em;
+    margin-bottom: 1em;
     /* Add margin between items */
     color: inherit;
     /* Inherit text color from parent */
@@ -83,8 +76,9 @@ body {
 // Styles for Slide Deck
 .main {
 
-    padding: 2em 4em;
-    padding-right: 120px;
+    padding: 0 4em;
+//    padding-right: 120px;
+    padding-right: 0;
     margin: 0 auto;
     width: 100%;
 
@@ -100,29 +94,16 @@ body {
     }
 }
 
-.img-container {
-    text-align: center;
-}
 
-.slide_logo {
-    width: 16em;
-    margin: 8em auto 0em auto;
 
-}
-
-#slide1 {
-    max-width: 32em;
-    margin: 0 auto;
-}
 
 
 .slides {
     .slide {
         display: none;
-        padding-bottom: 10em;
+        padding-bottom: 4em;
         width: 100%;
-        max-width: 56em;
-
+        max-width: 60em;
         &.active {
             display: block;
         }
@@ -182,6 +163,38 @@ body {
         text-decoration: none;
     }
 }
+
+
+#slide1 {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    .center-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .img-container {
+        margin-bottom: 1em;
+    }
+    
+    p {
+        font-size: 1.5em;
+        font-weight: 700;
+       white-space: nowrap;
+        margin-top: -1em;
+    }
+}
+
+.slide_logo {
+    width: 16em;
+//    margin: 8em auto 0em auto;
+
+}
+
 
 // Add these for dark and light modes
 body.dark .buttons button {
