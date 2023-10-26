@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
             if (logoImage) {
                 logoImage.src = isDarkMode ? 'images/logo_black.svg' : 'images/logo_white.svg';
             }
+
+            // Toggle theme classes on navigation buttons
+            const navButtons = document.querySelectorAll('.nav-button');
+            navButtons.forEach((button) => {
+                button.classList.toggle('light', !isDarkMode);
+                button.classList.toggle('dark', isDarkMode);
+            });
         }
     }
 
@@ -32,9 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function initializeNavigation() {
         slides.forEach((slide, index) => {
             const h2Text = slide.querySelector('h2') ? slide.querySelector('h2').textContent : 'Slide ' + (index + 1);
-            const navButton = document.createElement('li'); // Changed to 'li' as we are now using a 'ul'
+            const navButton = document.createElement('li');
             navButton.textContent = h2Text;
             navButton.classList.add('nav-button');
+            if (index === 0) {
+                navButton.classList.add('active'); // Add the "active" class to the first button
+            }
             navButton.addEventListener('click', function () {
                 currentSlide = index;
                 showSlide();
