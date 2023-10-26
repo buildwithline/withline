@@ -10,16 +10,20 @@
     <link rel="stylesheet" href="styles.css"> </head>
 
 <body>
-    <div class="main">
+  
+        
+        <div class="main">
+
         <div class="slides">
             <!-- Slide 1 -->
             <div class="slide active" id="slide1">
                 <div class="img-container"> <img id="logo" src="images/logo_black.svg" alt="" class="slide_logo"> </div>
-                <p style="text-align: center; font-size: 1.5em; font-weight: 700;">The Developer's Marketplace</p>
+                <p style="text-align: center; font-size: 1.5em; font-weight: 700;">The Developers Marketplace</p>
+                <h2 style="visibility: hidden;">Line</h2>
             </div>
              <!-- Slide 2: The Evolution of Software Development -->
             <div class="slide" id="slide2">
-                <h2>The Evolution of Software Development</h2>
+                <h2>Thesis</h2>
                 <p>From waterfall to agile, from closed source to open-source communities, software development has undergone transformative change.</p>
                 <p>Today, the empowerment of developers and community collaboration stand at the forefront, reshaping how software is created and maintained.</p>
                 <img src="images/evolution_timeline.png" alt="Evolution Timeline">
@@ -27,7 +31,7 @@
 <!-- Slide 3: The Paradigm Shift in Organizations -->
 <div class="slide" id="slide3">
 
-    <h2>Understanding the Problem Landscape</h2>
+    <h2>Problem Landscape</h2>
 <!--
     
 
@@ -215,9 +219,17 @@
         </div>
         <div class="buttons">
             <div id="theme-icon" class="theme-icon"> <img id="sun-icon" src="images/sun.svg" alt="Light Mode"> <img id="moon-icon" src="images/moon.svg" alt="Dark Mode"> </div>
+<!--
             <button id="prev">Previous</button>
-            <button id="next">Next</button> <span id="slideCounter" style="margin-left: 10px;">1/10</span> <a href="#" id="goto-first-slide" style="margin-left: 10px; display: none; font-size: .75em;">Restart</a> </div>
+            <button id="next">Next</button>
+-->
+            
+              <span id="slideCounter" style="margin-left: 10px;">1/10</span> <a href="#" id="goto-first-slide" style="margin-left: 10px; display: none; font-size: .75em;">Restart</a> </div>
     </div>
+    
+      <div id="slide-nav">
+  <!-- Navigation buttons will be inserted here dynamically -->
+</div>
     <script src="js/slide.js"></script>
 </body>
 
