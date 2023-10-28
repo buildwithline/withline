@@ -18,25 +18,19 @@ body {
     border: none;
     /* Remove border */
     cursor: pointer;
-    /* Add cursor pointer for better UX */
     padding: 0px;
-    /* Add some padding */
     margin-bottom: 1em;
-    /* Add margin between items */
-    color: inherit;
-    /* Inherit text color from parent */
-    font: inherit;
-    /* Inherit font from parent */
+//    color: inherit;
+//    font: inherit;
     text-align: left;
-    /* Align text to the left */
     font-size: .75em;
     color: lightgray;
     white-space: nowrap;
     &.light {
-        color: darkgray; // Change text color for light mode
+        color: #828282; // Change text color for light mode
     }
     &.dark {
-        color: lightgray; // Change text color for dark mode
+        color: #A0A0A0; // Change text color for dark mode
     }
 }
 
@@ -45,7 +39,7 @@ body {
     /* Add underline on hover for better UX */
     color: white;
     &.light {
-        color: black; // Change text color for light mode on hover
+        color: #121212; // Change text color for light mode on hover
     }
     &.dark {
         color: white; // Change text color for dark mode on hover
@@ -58,7 +52,7 @@ body {
     text-decoration: underline;
     color: white;
     &.light {
-        color: #000000; // Change text color for light mode when active
+        color: #121212; // Change text color for light mode when active
     }
     &.dark {
         color: #ffffff; // Change text color for dark mode when active
@@ -235,11 +229,11 @@ body {
 // Add these for dark and light modes
 body.dark .buttons button {
     background-color: #ffffff; // or any color that makes it visible on dark background
-    color: #000000; // text color for dark mode
+    color: #121212; // text color for dark mode
 }
 
 body.light .buttons button {
-    background-color: #000000; // or any color that makes it visible on light background
+    background-color: #121212; // or any color that makes it visible on light background
     color: #ffffff; // text color for light mode
 }
 
@@ -271,7 +265,7 @@ body.light .buttons button {
 
 // Dark Theme Styles
 body.dark {
-    background-color: #000000;
+    background-color: #121212;
     color: #ffffff;
     a {
         color: #ffffff;
@@ -282,9 +276,9 @@ body.dark {
 // Light Theme Styles
 body.light {
     background-color: #ffffff;
-    color: #000000;
+    color: #121212;
     a {
-        color: #000000;
+        color: #121212;
         text-decoration: underline;
     }
 }
