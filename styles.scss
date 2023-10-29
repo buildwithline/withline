@@ -20,11 +20,9 @@ body {
     cursor: pointer;
     padding: 0px;
     margin-bottom: 1em;
-//    color: inherit;
-//    font: inherit;
     text-align: left;
     font-size: .75em;
-    color: lightgray;
+    color: darkgray;
     white-space: nowrap;
     &.light {
         color: #828282; // Change text color for light mode
@@ -32,12 +30,23 @@ body {
     &.dark {
         color: #A0A0A0; // Change text color for dark mode
     }
+       &.active {
+        font-weight: bold;
+        text-decoration: underline;
+        &.light {
+            color: #121212; // Active text color for light mode
+        }
+        &.dark {
+            color: #ffffff; // Active text color for dark mode
+        }
+    }
+    
 }
 
 .nav-button:hover {
     text-decoration: underline;
     /* Add underline on hover for better UX */
-    color: white;
+//    color: white;
     &.light {
         color: #121212; // Change text color for light mode on hover
     }
@@ -50,7 +59,78 @@ body {
     font-weight: bold;
     /* Make active button bold */
     text-decoration: underline;
-    color: white;
+//    color: white;
+    color: body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15em;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+}
+
+#slide-nav {
+    list-style: none;
+    margin: 0;
+    padding: 5em 4em 0 0;
+    li {
+    &.light {
+        color: #828282; // Change text color for light mode
+    }
+    
+    }
+}
+
+.nav-button {
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    padding: 0px;
+    margin-bottom: 1em;
+//    color: inherit;
+//    font: inherit;
+    text-align: left;
+    font-size: .75em;
+//    color: lightgray;
+    white-space: nowrap;
+
+    li {
+    &.light {
+        color: #828282; // Change text color for light mode
+    }
+    &.dark {
+        color: #A0A0A0; // Change text color for dark mode
+    }
+        }
+}
+
+li.nav-button {
+       &.light {
+        color: #828282; // Change text color for light mode
+    }
+    &.dark {
+        color: #A0A0A0; // Change text color for dark mode
+    }
+}
+
+
+//li.nav-button.active {
+//    &.light {
+//        color: #121212; // Change text color for light mode when active
+//    }
+//    &.dark {
+//        color: #ffffff; // Change text color for dark mode when active
+//    }
+//}
+
+.nav-button.active {
+    font-weight: bold;
+    /* Make active button bold */
+    text-decoration: underline;
+
+     color: #121212;
     &.light {
         color: #121212; // Change text color for light mode when active
     }
@@ -59,6 +139,303 @@ body {
     }
 }
 
+
+.nav-button:hover {
+    text-decoration: underline;
+    /* Add underline on hover for better UX */
+    &.light {
+        color: #121212; // Change text color for light mode on hover
+    }
+    &.dark {
+        color: white; // Change text color for dark mode on hover
+    }
+}
+
+
+
+// Styles for Slide Deck
+.main {
+    padding: 0 4em;
+    //    padding-right: 120px;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    p {
+        line-height: 1.5; // Slightly increased line height
+        font-size: 1.5em; // Increased body font size
+        //    margin-top: 1.25em;
+    }
+}
+
+
+/* iframe styling */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio for widescreen videos */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #222222;
+    margin-top: 2em;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    .slide {
+        display: none;
+        padding-bottom: 4em;
+        width: 100%;
+        max-width: 60em;
+        &.active {
+            display: block;
+        }
+        h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: 700;
+            text-align: left;
+        }
+        h3 {
+            font-size: 1.35em; // Increased header font size
+            margin-top: 1.5em;
+        }
+        h4,
+        h5,
+        h6 {
+            font-size: .85em;
+            font-weight: 700;
+        }
+        ul,
+        ol {
+            font-size: .85em;
+            line-height: 1.5;
+            margin-top: 1.25em;
+            margin-left: 0em;
+        }
+        li {
+            margin-bottom: .5em;
+            font-size: 1.45em;
+        }
+    }
+}
+
+.buttons {
+    position: fixed;
+    bottom: 2em;
+    right: 3em;
+    //  transform: translateX(-50%);
+    z-index: 999;
+     text-decoration: none !important;
+    button + button {
+//        margin-left: 0.5em;
+    }
+    button {
+        font-size: 10.25em;
+        padding: .5em .75em;
+        border-radius: 0;
+        text-decoration: none !important;
+    }
+}
+
+#slide1 {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    .center-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .img-container {
+        margin-bottom: 1em;
+    }
+    p {
+        font-size: 1.5em;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-top: -1em;
+    }
+}
+
+.slide_logo {
+    width: 16em;
+    //    margin: 8em auto 0em auto;
+}
+
+/* mission section */
+.slide-section {
+    
+    margin-top: 4em;
+  .inspirational-text,
+  .empower-text {
+    font-size: larger; // Adjust as needed
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .image-container {
+    text-align: center;
+    margin: 30px 0;
+
+    img {
+      width: 100%; // Adjust as needed
+      height: auto; // Maintains aspect ratio
+        max-width: 28em;
+    }
+  }
+}
+
+
+
+/* Founder Sections */
+
+.founders {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.founder {
+    width: 30%;
+    text-align: center;
+    padding-top: 2em;
+    //    background: red;
+}
+
+.founder img {
+    max-width: 200px;
+    max-height: 200px;
+//        border-radius: 50%;
+}
+
+.founder-bio {
+    font-size: 0.8em !important;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+/* Adjust the ul and li styles */
+
+.founder ul {
+    font-size: 1em !important;
+    text-align: left;
+    /* Align the list items to the left */
+    margin-top: .9em;
+    /* Add margin to separate the list from the bio */
+}
+
+.founder ul li {
+    //    margin-left: 1em; /* Add some left margin for the list items */
+    font-size: .9em !important;
+    /* Adjust the font size for the list */
+}
+
+// Add these for dark and light modes
+body.dark .buttons button {
+    background-color: #ffffff; // or any color that makes it visible on dark background
+    color: #121212; // text color for dark mode
+}
+
+body.light .buttons button {
+    background-color: #121212; // or any color that makes it visible on light background
+    color: #ffffff; // text color for light mode
+}
+
+#slideCounter {
+    margin-left: 10px;
+    /* Or whatever distance you prefer */
+    font-size: .75em;
+    font-weight: 700;
+}
+
+.theme-toggle-wrapper {
+    display: inline-block;
+    margin-left: 20px;
+    /* Add space between buttons and toggle */
+}
+
+// dark theme manual toggle
+.theme-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 4px;
+vertical-align: middle;
+}
+
+.theme-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+// Dark Theme Styles
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+    a {
+        color: #ffffff;
+        text-decoration-color: #ffffff;
+    }
+}
+
+// Light Theme Styles
+body.light {
+    background-color: #ffffff;
+    color: #121212;
+    a {
+        color: #121212;
+        text-decoration: underline;
+    }
+}
+
+// Common Styles for both Themes
+.toggleHeader,
+.buttons button {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: .85em;
+    font-weight: 400;
+}
+
+#contact {
+    display: none;
+    margin-left: 15px; /* adjust as necessary */
+    text-decoration: underline;
+    color: #0000EE; /* standard link color */
+    font-size: .85em;
+   color: #606060;
+}
+
+#prev.restart {
+    background: none;
+    border: none;
+    padding: 0;
+    padding-right: 6px;
+    font: inherit;
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: #606060;
+      font-size: .85em !important;
+}
+
+
+   
 // Styles for Slide Deck
 .main {
     padding: 0 4em;
@@ -343,6 +720,13 @@ body.light {
 @media only screen and (max-width: 768px) {
     #slide-nav {
         display: none;
+         &.light {
+        color: #121212; // Change text color for light mode when active
+    }
+    &.dark {
+        color: #ffffff; // Change text color for dark mode when active
+    }
+
     }
     
     .main {
