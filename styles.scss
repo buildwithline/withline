@@ -183,6 +183,31 @@ body {
     //    margin: 8em auto 0em auto;
 }
 
+/* mission section */
+.slide-section {
+    
+    margin-top: 4em;
+  .inspirational-text,
+  .empower-text {
+    font-size: larger; // Adjust as needed
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .image-container {
+    text-align: center;
+    margin: 30px 0;
+
+    img {
+      width: 100%; // Adjust as needed
+      height: auto; // Maintains aspect ratio
+        max-width: 28em;
+    }
+  }
+}
+
+
 
 /* Founder Sections */
 
