@@ -6,299 +6,220 @@ body {
     display: flex;
 }
 
+.nav-button, li.nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: .75em;
+    white-space: nowrap;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 #slide-nav {
     list-style: none;
     margin: 0;
     padding: 5em 4em 0 0;
 }
 
-.nav-button {
-    background: none;
-    /* Remove background */
-    border: none;
-    /* Remove border */
-    cursor: pointer;
-    padding: 0px;
-    margin-bottom: 1em;
-    text-align: left;
-    font-size: .75em;
-    color: darkgray;
-    white-space: nowrap;
-    &.light {
-        color: #828282; // Change text color for light mode
+body.light {
+    .nav-button, li.nav-button {
+        color: #828282; // Text color for light mode
+        
+        &:hover {
+            color: #121212; // Text color for light mode on hover
+        }
+
+        &.active {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #121212; // Text color for light mode when active
+        }
     }
-    &.dark {
-        color: #A0A0A0; // Change text color for dark mode
+}
+
+body.dark {
+    .nav-button, li.nav-button {
+        color: #A0A0A0; // Text color for dark mode
+        
+        &:hover {
+            color: white; // Text color for dark mode on hover
+        }
+
+        &.active {
+            font-weight: bold;
+            text-decoration: underline;
+            color: white; // Text color for dark mode when active
+        }
     }
-       &.active {
+}
+
+
+// Styles for Slide Deck
+.main {
+    padding: 0 4em;
+    //    padding-right: 120px;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        line-height: 1.5; // Slightly increased line height
+        font-size: 1.5em; // Increased body font size
+        //    margin-top: 1.25em;
+    }
+}
+
+
+/* iframe styling */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio for widescreen videos */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #222222;
+    margin-top: 2em;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    .slide {
+        display: none;
+        padding-bottom: 4em;
+        width: 100%;
+        max-width: 60em;
+
+        &.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 1.35em; // Increased header font size
+            margin-top: 1.5em;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: .85em;
+            font-weight: 700;
+        }
+
+        ul,
+        ol {
+            font-size: .85em;
+            line-height: 1.5;
+            margin-top: 1.25em;
+            margin-left: 0em;
+        }
+
+        li {
+            margin-bottom: .5em;
+            font-size: 1.45em;
+        }
+    }
+}
+
+.buttons {
+    position: fixed;
+    bottom: 2em;
+    right: 3em;
+    //  transform: translateX(-50%);
+    z-index: 999;
+    text-decoration: none !important;
+
+    button + button {
+        //        margin-left: 0.5em;
+    }
+
+    button {
+        font-size: 10.25em;
+        padding: .5em .75em;
+        border-radius: 0;
+        text-decoration: none !important;
+    }
+}
+
+#slide1 {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+
+    .center-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .img-container {
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 1.5em;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-top: -1em;
+    }
+}
+
+.slide_logo {
+    width: 16em;
+    //    margin: 8em auto 0em auto;
+}
+
+/* mission section */
+.slide-section {
+
+    margin-top: 4em;
+
+    .inspirational-text,
+    .empower-text {
+        font-size: larger; // Adjust as needed
         font-weight: bold;
-        text-decoration: underline;
-        &.light {
-            color: #121212; // Active text color for light mode
-        }
-        &.dark {
-            color: #ffffff; // Active text color for dark mode
-        }
-    }
-    
-}
-
-.nav-button:hover {
-    text-decoration: underline;
-    /* Add underline on hover for better UX */
-//    color: white;
-    &.light {
-        color: #121212; // Change text color for light mode on hover
-    }
-    &.dark {
-        color: white; // Change text color for dark mode on hover
-    }
-}
-
-.nav-button.active {
-    font-weight: bold;
-    /* Make active button bold */
-    text-decoration: underline;
-//    color: white;
-    color: body {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.15em;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-}
-}
-
-#slide-nav {
-    list-style: none;
-    margin: 0;
-    padding: 5em 4em 0 0;
-    li {
-    &.light {
-        color: #828282; // Change text color for light mode
-    }
-    
-    }
-}
-
-.nav-button {
-    background: none;
-    /* Remove background */
-    border: none;
-    /* Remove border */
-    cursor: pointer;
-    padding: 0px;
-    margin-bottom: 1em;
-//    color: inherit;
-//    font: inherit;
-    text-align: left;
-    font-size: .75em;
-//    color: lightgray;
-    white-space: nowrap;
-
-    li {
-    &.light {
-        color: #828282; // Change text color for light mode
-    }
-    &.dark {
-        color: #A0A0A0; // Change text color for dark mode
-    }
-        }
-}
-
-li.nav-button {
-       &.light {
-        color: #828282; // Change text color for light mode
-    }
-    &.dark {
-        color: #A0A0A0; // Change text color for dark mode
-    }
-}
-
-
-//li.nav-button.active {
-//    &.light {
-//        color: #121212; // Change text color for light mode when active
-//    }
-//    &.dark {
-//        color: #ffffff; // Change text color for dark mode when active
-//    }
-//}
-
-.nav-button.active {
-    font-weight: bold;
-    /* Make active button bold */
-    text-decoration: underline;
-
-     color: #121212;
-    &.light {
-        color: #121212; // Change text color for light mode when active
-    }
-    &.dark {
-        color: #ffffff; // Change text color for dark mode when active
-    }
-}
-
-
-.nav-button:hover {
-    text-decoration: underline;
-    /* Add underline on hover for better UX */
-    &.light {
-        color: #121212; // Change text color for light mode on hover
-    }
-    &.dark {
-        color: white; // Change text color for dark mode on hover
-    }
-}
-
-
-
-// Styles for Slide Deck
-.main {
-    padding: 0 4em;
-    //    padding-right: 120px;
-    padding-right: 0;
-    margin: 0 auto;
-    width: 100%;
-    img {
-        width: 100%;
-    }
-    p {
-        line-height: 1.5; // Slightly increased line height
-        font-size: 1.5em; // Increased body font size
-        //    margin-top: 1.25em;
-    }
-}
-
-
-/* iframe styling */
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    /* 16:9 aspect ratio for widescreen videos */
-    height: 0;
-    overflow: hidden;
-    border: 1px solid #222222;
-    margin-top: 2em;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slides {
-    .slide {
-        display: none;
-        padding-bottom: 4em;
-        width: 100%;
-        max-width: 60em;
-        &.active {
-            display: block;
-        }
-        h2 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-top: 2em;
-            margin-bottom: 1em;
-            font-weight: 700;
-            text-align: left;
-        }
-        h3 {
-            font-size: 1.35em; // Increased header font size
-            margin-top: 1.5em;
-        }
-        h4,
-        h5,
-        h6 {
-            font-size: .85em;
-            font-weight: 700;
-        }
-        ul,
-        ol {
-            font-size: .85em;
-            line-height: 1.5;
-            margin-top: 1.25em;
-            margin-left: 0em;
-        }
-        li {
-            margin-bottom: .5em;
-            font-size: 1.45em;
-        }
-    }
-}
-
-.buttons {
-    position: fixed;
-    bottom: 2em;
-    right: 3em;
-    //  transform: translateX(-50%);
-    z-index: 999;
-     text-decoration: none !important;
-    button + button {
-//        margin-left: 0.5em;
-    }
-    button {
-        font-size: 10.25em;
-        padding: .5em .75em;
-        border-radius: 0;
-        text-decoration: none !important;
-    }
-}
-
-#slide1 {
-    position: relative;
-    height: 100vh;
-    max-width: 100%;
-    .center-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
+        margin: 20px 0;
     }
-    .img-container {
-        margin-bottom: 1em;
+
+    .image-container {
+        text-align: center;
+        margin: 30px 0;
+
+        img {
+            width: 100%; // Adjust as needed
+            height: auto; // Maintains aspect ratio
+            max-width: 28em;
+        }
     }
-    p {
-        font-size: 1.5em;
-        font-weight: 700;
-        white-space: nowrap;
-        margin-top: -1em;
-    }
-}
-
-.slide_logo {
-    width: 16em;
-    //    margin: 8em auto 0em auto;
-}
-
-/* mission section */
-.slide-section {
-    
-    margin-top: 4em;
-  .inspirational-text,
-  .empower-text {
-    font-size: larger; // Adjust as needed
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .image-container {
-    text-align: center;
-    margin: 30px 0;
-
-    img {
-      width: 100%; // Adjust as needed
-      height: auto; // Maintains aspect ratio
-        max-width: 28em;
-    }
-  }
 }
 
 
@@ -320,7 +241,7 @@ li.nav-button {
 .founder img {
     max-width: 200px;
     max-height: 200px;
-//        border-radius: 50%;
+    //        border-radius: 50%;
 }
 
 .founder-bio {
@@ -376,7 +297,7 @@ body.light .buttons button {
     cursor: pointer;
     margin-right: 10px;
     margin-top: 4px;
-vertical-align: middle;
+    vertical-align: middle;
 }
 
 .theme-icon img {
@@ -388,6 +309,7 @@ vertical-align: middle;
 body.dark {
     background-color: #121212;
     color: #ffffff;
+
     a {
         color: #ffffff;
         text-decoration-color: #ffffff;
@@ -398,6 +320,7 @@ body.dark {
 body.light {
     background-color: #ffffff;
     color: #121212;
+
     a {
         color: #121212;
         text-decoration: underline;
@@ -415,11 +338,13 @@ body.light {
 
 #contact {
     display: none;
-    margin-left: 15px; /* adjust as necessary */
+    margin-left: 15px;
+    /* adjust as necessary */
     text-decoration: underline;
-    color: #0000EE; /* standard link color */
+    color: #0000EE;
+    /* standard link color */
     font-size: .85em;
-   color: #606060;
+    color: #606060;
 }
 
 #prev.restart {
@@ -431,11 +356,11 @@ body.light {
     text-decoration: underline !important;
     cursor: pointer;
     color: #606060;
-      font-size: .85em !important;
+    font-size: .85em !important;
 }
 
 
-   
+
 // Styles for Slide Deck
 .main {
     padding: 0 4em;
@@ -443,9 +368,11 @@ body.light {
     padding-right: 0;
     margin: 0 auto;
     width: 100%;
+
     img {
         width: 100%;
     }
+
     p {
         line-height: 1.5; // Slightly increased line height
         font-size: 1.5em; // Increased body font size
@@ -480,9 +407,11 @@ body.light {
         padding-bottom: 4em;
         width: 100%;
         max-width: 60em;
+
         &.active {
             display: block;
         }
+
         h2 {
             font-size: 2.5em;
             font-weight: 700;
@@ -491,16 +420,19 @@ body.light {
             font-weight: 700;
             text-align: left;
         }
+
         h3 {
             font-size: 1.35em; // Increased header font size
             margin-top: 1.5em;
         }
+
         h4,
         h5,
         h6 {
             font-size: .85em;
             font-weight: 700;
         }
+
         ul,
         ol {
             font-size: .85em;
@@ -508,6 +440,7 @@ body.light {
             margin-top: 1.25em;
             margin-left: 0em;
         }
+
         li {
             margin-bottom: .5em;
             font-size: 1.45em;
@@ -521,10 +454,12 @@ body.light {
     right: 3em;
     //  transform: translateX(-50%);
     z-index: 999;
-     text-decoration: none !important;
+    text-decoration: none !important;
+
     button + button {
-//        margin-left: 0.5em;
+        //        margin-left: 0.5em;
     }
+
     button {
         font-size: 10.25em;
         padding: .5em .75em;
@@ -537,6 +472,7 @@ body.light {
     position: relative;
     height: 100vh;
     max-width: 100%;
+
     .center-content {
         position: absolute;
         top: 50%;
@@ -544,9 +480,11 @@ body.light {
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
     .img-container {
         margin-bottom: 1em;
     }
+
     p {
         font-size: 1.5em;
         font-weight: 700;
@@ -562,26 +500,27 @@ body.light {
 
 /* mission section */
 .slide-section {
-    
+
     margin-top: 4em;
-  .inspirational-text,
-  .empower-text {
-    font-size: larger; // Adjust as needed
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-  }
 
-  .image-container {
-    text-align: center;
-    margin: 30px 0;
-
-    img {
-      width: 100%; // Adjust as needed
-      height: auto; // Maintains aspect ratio
-        max-width: 28em;
+    .inspirational-text,
+    .empower-text {
+        font-size: larger; // Adjust as needed
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0;
     }
-  }
+
+    .image-container {
+        text-align: center;
+        margin: 30px 0;
+
+        img {
+            width: 100%; // Adjust as needed
+            height: auto; // Maintains aspect ratio
+            max-width: 28em;
+        }
+    }
 }
 
 
@@ -603,7 +542,7 @@ body.light {
 .founder img {
     max-width: 200px;
     max-height: 200px;
-//        border-radius: 50%;
+    //        border-radius: 50%;
 }
 
 .founder-bio {
@@ -659,7 +598,7 @@ body.light .buttons button {
     cursor: pointer;
     margin-right: 10px;
     margin-top: 4px;
-vertical-align: middle;
+    vertical-align: middle;
 }
 
 .theme-icon img {
@@ -671,6 +610,7 @@ vertical-align: middle;
 body.dark {
     background-color: #121212;
     color: #ffffff;
+
     a {
         color: #ffffff;
         text-decoration-color: #ffffff;
@@ -681,6 +621,7 @@ body.dark {
 body.light {
     background-color: #ffffff;
     color: #121212;
+
     a {
         color: #121212;
         text-decoration: underline;
@@ -698,11 +639,13 @@ body.light {
 
 #contact {
     display: none;
-    margin-left: 15px; /* adjust as necessary */
+    margin-left: 15px;
+    /* adjust as necessary */
     text-decoration: underline;
-    color: #0000EE; /* standard link color */
+    color: #0000EE;
+    /* standard link color */
     font-size: .85em;
-   color: #606060;
+    color: #606060;
 }
 
 #prev.restart {
@@ -714,26 +657,29 @@ body.light {
     text-decoration: underline !important;
     cursor: pointer;
     color: #606060;
-      font-size: .85em !important;
+    font-size: .85em !important;
 }
 
 @media only screen and (max-width: 768px) {
     #slide-nav {
         display: none;
-         &.light {
-        color: #121212; // Change text color for light mode when active
-    }
-    &.dark {
-        color: #ffffff; // Change text color for dark mode when active
-    }
+
+        &.light {
+            color: #121212; // Change text color for light mode when active
+        }
+
+        &.dark {
+            color: #ffffff; // Change text color for dark mode when active
+        }
 
     }
-    
+
     .main {
         padding: 0 2em;
-    padding-right: 3em;}
-    
-       #contact {
+        padding-right: 3em;
+    }
+
+    #contact {
         display: inline-block;
     }
 
