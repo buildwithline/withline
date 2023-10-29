@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    const slideNavContainer = document.createElement('ul'); // Changed to 'ul' to represent an unordered list
+    const slideNavContainer = document.createElement('ul');
     slideNavContainer.id = 'slide-nav';
-    document.body.appendChild(slideNavContainer); // Append the navigation container to the body
+    document.body.appendChild(slideNavContainer);
 
     function initializeNavigation() {
         slides.forEach((slide, index) => {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navButton.textContent = h2Text;
             navButton.classList.add('nav-button');
             if (index === 0) {
-                navButton.classList.add('active'); // Add the "active" class to the first button
+                navButton.classList.add('active');
             }
             navButton.addEventListener('click', function () {
                 currentSlide = index;
@@ -63,10 +63,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         document.getElementById("slideCounter").textContent = `${currentSlide + 1}/${totalSlides}`;
+        updateNavigationButtons();
     }
+
+function updateNavigationButtons() {
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    if (currentSlide === totalSlides - 1) {
+        nextButton.style.display = 'none';
+        prevButton.textContent = 'Restart';
+        prevButton.classList.add('restart'); // Add the restart class
+    } else {
+        nextButton.style.display = 'inline-block';
+        prevButton.textContent = 'Previous';
+        prevButton.classList.remove('restart'); // Remove the restart class
+    }
+
+    if (currentSlide === 0) {
+        prevButton.style.display = 'none';
+    } else {
+        prevButton.style.display = 'inline-block';
+    }
+}
+
 
     showSlide();
     initializeNavigation();
+
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+
+    if (nextButton) {
+        nextButton.addEventListener('click', function () {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide();
+            }
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', function () {
+            if (currentSlide === totalSlides - 1) {
+                currentSlide = 0;
+                showSlide();
+            } else if (currentSlide > 0) {
+                currentSlide--;
+                showSlide();
+            }
+        });
+    }
 
     // Theme toggle logic
     document.getElementById('theme-icon').addEventListener('click', function () {
