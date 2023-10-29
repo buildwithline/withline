@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     // Check user's browser theme preference
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
 
     // Slideshow logic
     const slides = document.querySelectorAll('.slide');
@@ -66,27 +68,26 @@ document.addEventListener('DOMContentLoaded', function () {
         updateNavigationButtons();
     }
 
-function updateNavigationButtons() {
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
+    function updateNavigationButtons() {
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
 
-    if (currentSlide === totalSlides - 1) {
-        nextButton.style.display = 'none';
-        prevButton.textContent = 'Restart';
-        prevButton.classList.add('restart'); // Add the restart class
-    } else {
-        nextButton.style.display = 'inline-block';
-        prevButton.textContent = 'Previous';
-        prevButton.classList.remove('restart'); // Remove the restart class
+        if (currentSlide === totalSlides - 1) {
+            nextButton.style.display = 'none';
+            prevButton.textContent = 'Restart';
+            prevButton.classList.add('restart'); // Add the restart class
+        } else {
+            nextButton.style.display = 'inline-block';
+            prevButton.textContent = 'Previous';
+            prevButton.classList.remove('restart'); // Remove the restart class
+        }
+
+        if (currentSlide === 0) {
+            prevButton.style.display = 'none';
+        } else {
+            prevButton.style.display = 'inline-block';
+        }
     }
-
-    if (currentSlide === 0) {
-        prevButton.style.display = 'none';
-    } else {
-        prevButton.style.display = 'inline-block';
-    }
-}
-
 
     showSlide();
     initializeNavigation();
@@ -118,7 +119,6 @@ function updateNavigationButtons() {
     // Theme toggle logic
     document.getElementById('theme-icon').addEventListener('click', function () {
         const isDarkMode = document.body.classList.contains('dark');
-        setThemeAndIcons(!isDarkMode);
+        setThemeAndIcons(!isDarkMode, true);
     });
 });
-
