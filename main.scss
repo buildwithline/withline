@@ -28,7 +28,7 @@ body {
 
 .main {
   margin: 0 auto;
-  max-width: 45em;
+  max-width: 42em;
   box-sizing: border-box;
   text-align: left;
     
@@ -63,7 +63,11 @@ body {
     p {
       font-weight: 700;
       font-size: 2em;
-      margin-top: -.25em;
+      margin-top: -.4em;
+        
+            @media only screen and (max-width: 768px) {
+   font-size: 1.25em;
+  }
     }
 
     #logo {
@@ -209,7 +213,7 @@ body {
   padding-bottom: 56.25%; // 16:9 Aspect Ratio (9 / 16 = 0.5625)
   height: 0;
   width: 100%; // Set to 100% to fill the container
-  max-width: 45em; // Maximum width of the container
+  max-width: 42em; // Maximum width of the container
   margin: auto; // Center align the container
   
   iframe {
