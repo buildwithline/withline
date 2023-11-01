@@ -24,21 +24,50 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Build with Line</title>
+    <title>Line</title>
 </head>
 
 <body>
     <div class="main">
-        <div class="header"><img id="logo" src="images/logo_white.svg" alt=""></div>
-        <p>Today, the question of 'What is an organization?' has never been more relevant, as we witness transformative changes that redefine the very nature of organizations and reshape how we collectively organize our efforts. Traditional notions of centralization are being challenged as we observe the rise of remote work, open-source based businesses, freelancing, digital nomadism, permissionless protocols, and network communities.</p>
-        <p>These dynamics foster collaboration beyond the confines of jurisdiction and traditional institutions, opening up new opportunities for collective cooperation. Decentralized organizations and communities promote autonomy, flexibility, and diverse contributions, departing from traditional hierarchies. </p>
-        <p>Line's mission is to merge the wisdom gained from emerging organizational patterns with transformative innovation empowering individuals, groups, and organizations alike. Whether you are a self-taught programmer seeking practical experience, a business looking to engage freelancers, an open-source project accepting contributions, a community organizing around a common objective, an entrepreneur building a product, or an established business maturing their organization, Line offers a platform to achieve and execute your goals. It provides opportunities for individuals to gain experience, businesses to access global talent, and communities to organize and mobilize collective efforts.</p>
-        <p>In this evolving landscape, Line opens new avenues for organizations and incentives, that promise greater autonomy, innovation, and collective progress. It represents an empowering shift, where the path to freedom has become more accessible than ever.</p>
-        <p>Build your dream with Line.</p>
+        <div class="header">
+            <div class="logo-container"> <img id="logo" src="images/logo_white.svg" alt="">
+                <p>The Developers Marketplace</p>
+            </div>
+        </div>
+        <hr>
+        <p>Line is currently in an experimental phase exploring concepts and potential directions. The project focuses on software developers: freelancers, project owners, and contributors, with the aim of transcending traditional boundaries toward greater ownership and autonomy. 
         
+        <p>If you have any questions, would like to learn more, or are interested in getting involved, please feel free to reach out <a href="mailto:kyle@convexitydesign.com">here</a>, or explore further details on our <a href="https://github.com/buildwithline/line#readme" target="_blank">readme</a>. </p>
+        <hr>
+        <p class="toggleHeader" id="toggleHeader">2-min intro video</p>
+        <div id="expandableContent" class="expandable-content">
+         <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/0UFKBwKsPHw?si=XZFd9LxucHBRLLc4" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+            <hr> </div>
+        <script>
+            const toggleHeader = document.getElementById("toggleHeader");
+            const expandableContent = document.getElementById("expandableContent");
+            toggleHeader.addEventListener("click", function () {
+                if (expandableContent.classList.contains('open')) {
+                    expandableContent.classList.remove('open');
+                    toggleHeader.classList.remove('open');
+                }
+                else {
+                    expandableContent.classList.add('open');
+                    toggleHeader.classList.add('open');
+                }
+            });
+        </script>
     </div>
+    <link rel="stylesheet" href="main.css">
+    <script src="js/script.js"></script>
 </body>
 
 </html>
-<link rel="stylesheet" href="main.css">
-<script src="js/script.js"></script>

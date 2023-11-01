@@ -1,79 +1,111 @@
 body {
   font-family: 'Inter', sans-serif;
-  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  &.light {
+    background-color: #ffffff;
+    color: #121212;
+    
+    a {
+       color: #121212;
+       text-decoration: underline;
+    }
+
+    .toggleHeader {
+      color: #121212; // Light mode text color
+    }
+  }
 }
 
 .main {
-  padding: 8em 4em;
   margin: 0 auto;
-  max-width: 37em;
-#slide-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.nav-button {
-  padding: 5px 10px;
-  margin: 5px;
-  cursor: pointer;
-  text-align: center;
-  max-width: 150px; /* adjust as needed */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  
-}
-
-.nav-button.active {
-  background-color: #007bff;
-  color: white;
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.navbar li {
-  margin-bottom: 10px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-    img {
-        width: 100%;
-    }
+  max-width: 45em;
+  box-sizing: border-box;
+  text-align: left;
     
-    #logo {
-        max-width: 12em;
-    }
-
-  hr {
-    border: 0;
-    height: 1px;
-    background: #515151;
-    margin-top: 2em;
-    margin-bottom: 2em;
+      @media only screen and (max-width: 768px) {
+    padding: 8em 2em; // adds padding on smaller screens
   }
 
-  a {
-    text-decoration-color: #ffffff;
-    color: #ffffff;
+  @media only screen and (max-width: 480px) {
+    padding: 8em 1em; // adds more padding on even smaller screens
+  }
+
+  #slide-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
   }
 
   .header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 2em;
+    margin-bottom: -2em;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p {
+      font-weight: 700;
+      font-size: 2em;
+      margin-top: -.25em;
+    }
+
+    #logo {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav-button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    max-width: 150px; // Adjust as needed
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.active {
+      background-color: #007bff;
+      color: white;
+    }
+  }
+
+  .navbar {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    a {
+      color: white;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   p {
@@ -117,65 +149,74 @@ body {
     border-left: 3px solid #ccc;
     padding-left: 0.5em;
   }
-}
 
-/* Dark Theme Styles */
-body.dark {
-  background-color: #000000;
-  color: #ffffff;
-}
+  hr {
+    border: 0;
+    height: 1px;
+    background: #515151;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
 
-/* Light Theme Styles */
-body.light {
-  background-color: #ffffff;
-  color: #000000;
-    a {
-       color: #000000;
-        text-decoration: underline;
-    }
+  a {
+    text-decoration-color: #ffffff;
+    color: #ffffff;
+  }
 
-  .toggleHeader {
-    color: #000000; /* Light mode text color */
+  img {
+    width: 100%;
   }
 }
 
-/* Common Styles for both Themes */
 .toggleHeader {
   cursor: pointer;
   text-decoration: underline;
   font-size: .85em;
   font-weight: 400;
+  text-align: left;
+
   &:after {
     content: " [+]";
   }
+
   &.open:after {
     content: " [-]";
   }
 }
 
-#expandableContent {
-  display: none;
-  transition: max-height 0.3s ease-out;
-  overflow: hidden;
-  max-height: 0;
-  margin-top: -1em;
-//  padding: 1em;
-  border-radius: 4px;
-  box-shadow: none;
-  &.open {
-    display: block;
-    max-height: 1000px; /* Approximate max height */
-  }
-}
-
+#expandableContent,
 .expandable-content {
   margin-top: 0em;
   padding: 0em;
   border-radius: 4px;
   box-shadow: none;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  
+  &.open {
+    max-height: 1000px; // Approximate max height
+    display: block;
+  }
 }
 
-body.dark {
-  background-color: #000000;
-  color: #ffffff;
+#expandableContent {
+  margin-top: -1em;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9 Aspect Ratio (9 / 16 = 0.5625)
+  height: 0;
+  width: 100%; // Set to 100% to fill the container
+  max-width: 45em; // Maximum width of the container
+  margin: auto; // Center align the container
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; // Set to 100% to fill the .video-container
+    height: 100%; // Set to 100% to fill the .video-container
+  }
 }
